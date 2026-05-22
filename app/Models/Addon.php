@@ -17,4 +17,8 @@ class Addon extends Model
     {
         return $this->hasMany(AddonImage::class);
     }
+
+    public function addonDependencies() {
+        return $this->hasMany(AddonDependency::class);
+    }
 }
