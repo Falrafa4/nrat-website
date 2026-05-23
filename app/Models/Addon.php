@@ -6,7 +6,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class Addon extends Model
 {
-    protected $fillable = ['category_id', 'title', 'slug', 'description', 'thumbnail', 'downlaod_url', 'source_name', 'file_size', 'addon_type', 'status', 'is_featured', 'published_at'];
+    protected $fillable = [
+        'category_id',
+        'title',
+        'slug',
+        'description',
+        'thumbnail',
+        'download_url',
+        'source_name',
+        'file_size',
+        'addon_type',
+        'status',
+        'is_featured',
+        'published_at'
+    ];
 
     public function category()
     {
@@ -18,7 +31,13 @@ class Addon extends Model
         return $this->hasMany(AddonImage::class);
     }
 
-    public function addonDependencies() {
+    public function addonDependencies()
+    {
         return $this->hasMany(AddonDependency::class);
+    }
+
+    public function downloadLogs()
+    {
+        return $this->hasMany(DownloadLog::class);
     }
 }
