@@ -26,12 +26,12 @@ class Addon extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function addonImages()
+    public function images()
     {
         return $this->hasMany(AddonImage::class);
     }
 
-    public function addonDependencies()
+    public function dependencies()
     {
         return $this->hasMany(AddonDependency::class);
     }
