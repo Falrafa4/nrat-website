@@ -24,7 +24,8 @@ return new class extends Migration
             $table->enum('addon_type', ['freeware', 'private', 'payware']);
             $table->enum('status', ['draft', 'published']);
             $table->boolean('is_featured');
-            $table->string('published_at');
+            $table->timestamp('published_at')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
