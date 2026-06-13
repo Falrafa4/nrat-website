@@ -18,7 +18,7 @@ class AddonResource extends Resource
 {
     protected static ?string $model = Addon::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedDocument;
 
     protected static ?string $recordTitleAttribute = 'addon';
 
