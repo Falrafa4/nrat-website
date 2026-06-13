@@ -6,7 +6,6 @@ use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
-use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Section;
@@ -43,14 +42,8 @@ class AddonForm
                             ->preload()
                             ->required(),
 
-                        Textarea::make('short_description')
-                            ->label('Deskripsi Singkat')
-                            ->rows(3)
-                            ->maxLength(255)
-                            ->columnSpanFull(),
-
                         RichEditor::make('description')
-                            ->label('Deskripsi Lengkap')
+                            ->label('Deskripsi')
                             ->required()
                             ->columnSpanFull(),
                     ])
