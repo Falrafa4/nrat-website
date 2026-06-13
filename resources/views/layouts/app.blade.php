@@ -15,5 +15,4 @@
     </main>
     <x-footer />
     @yield('script')
-</body>
 </html>
