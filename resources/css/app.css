@@ -20,10 +20,18 @@
     --color-background: #ffffff;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @apply bg-background font-desc text-slate-900 antialiased;
+}
+
 h1, h2, h3, h4, h5, h6 {
     @apply font-title
 }
 
 .nav-link {
-    @apply text-background/80 hover:text-background transition
+    @apply text-sm text-background/80 transition hover:text-background sm:text-base;
 }
