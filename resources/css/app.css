@@ -35,3 +35,15 @@ h1, h2, h3, h4, h5, h6 {
 .nav-link {
     @apply text-sm text-background/80 transition hover:text-background sm:text-base;
 }
+
+#main-nav.navbar-scrolled {
+    @apply text-primary-950;
+}
+
+#main-nav.navbar-scrolled #nav-content {
+    @apply bg-white/90 border-primary-950/10 shadow-xl;
+}
+
+#main-nav.navbar-scrolled .nav-link {
+    @apply text-primary-950/70 hover:text-primary-950;
+}
