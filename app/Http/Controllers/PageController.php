@@ -18,6 +18,11 @@ class PageController extends Controller
         return view('pages.my-content');
     }
 
+    public function terms()
+    {
+        return view('pages.terms');
+    }
+
     public function contact()
     {
         return view('pages.contact');
