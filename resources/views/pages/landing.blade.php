@@ -25,7 +25,7 @@
         class="relative flex min-h-screen items-center justify-center overflow-hidden px-6 pt-28 pb-20 text-background sm:px-8 lg:px-12">
         <div class="absolute inset-0 bg-cover bg-center blur-[3px] scale-105"
             style="background-image: url('{{ asset('images/bg-navbar.webp') }}');"></div>
-        <div class="absolute inset-0 bg-slate-900/35"></div>
+        <div class="absolute inset-0 bg-slate-950/35"></div>
 
         <div class="relative z-10 mx-auto flex max-w-5xl flex-col items-center text-center">
             <h1 class="text-5xl font-bold tracking-tight sm:text-7xl lg:text-[5.5rem]">NRATrainz</h1>
@@ -44,8 +44,8 @@
             <img src="{{ asset('images/welcome-trainzer.webp') }}" alt="Koleksi addons Trainz"
                 class="h-auto w-full object-cover" />
 
-            <div class="flex flex-col items-center text-center z-10 absolute inset-0 mt-8">
-                <h2 class="text-4xl font-bold tracking-tight text-white sm:text-5xl z-10">Welcome Trainzer!</h2>
+            <div class="flex flex-col items-center text-center z-10 absolute inset-0 mt-16">
+                <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl z-10">Welcome Trainzer!</h2>
                 <span class="mt-2 h-0.5 w-28 rounded-full bg-white/90 z-10"></span>
             </div>
         </div>
@@ -60,8 +60,8 @@
         <div class="mt-10 px-32 grid gap-5 md:grid-cols-3">
             @foreach ($features as $feature)
                 <article
-                    class="z-10 rounded-2xl border border-primary-900/35 px-8 py-9 text-center shadow-[0_8px_30px_rgba(15,23,42,0.05)] transition hover:-translate-y-1 hover:shadow-[0_14px_35px_rgba(15,23,42,0.08)]">
-                    <i class="fa-solid {{ $feature['icon'] }} text-4xl text-primary-900"></i>
+                    class="z-10 rounded-2xl border border-primary-950/35 px-8 py-9 text-center shadow-[0_8px_30px_rgba(15,23,42,0.05)] transition hover:-translate-y-1 hover:shadow-[0_14px_35px_rgba(15,23,42,0.08)]">
+                    <i class="fa-solid {{ $feature['icon'] }} text-4xl text-primary-950"></i>
                     <h3 class="mt-5 text-3xl font-bold text-primary-950">{{ $feature['title'] }}</h3>
                     <p class="mt-3 text-sm leading-6 text-slate-600 sm:text-base">{{ $feature['description'] }}</p>
                 </article>
@@ -76,20 +76,20 @@
             <div class="mt-8 grid gap-6 lg:grid-cols-2">
                 @forelse ($latestAddons as $addon)
                     <article class="group relative overflow-hidden rounded-xl shadow-[0_18px_40px_rgba(15,23,42,0.18)]">
-                        <img src="{{ $addon['image'] }}" alt="{{ $addon['title'] }}"
+                        <img src="{{ asset('storage/'.$addon['thumbnail']) }}" alt="{{ $addon['title'] }}"
                             class="h-72 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-80" />
                         <div class="absolute inset-0 bg-linear-to-t from-black via-black/45 to-transparent"></div>
                         <div class="absolute inset-x-0 bottom-0 p-6 text-white">
                             <div class="flex flex-wrap items-center gap-3">
                                 <h3 class="text-2xl font-bold sm:text-4xl">{{ $addon['title'] }}</h3>
                                 <span
-                                    class="rounded-full bg-primary-900 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em]">
-                                    {{ $addon['type'] }}
+                                    class="rounded-full bg-primary-950 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em]">
+                                    {{ $addon['category']['name'] }}
                                 </span>
                             </div>
                             <div class="mt-5 flex flex-wrap gap-3">
                                 <a href="#"
-                                    class="inline-flex min-w-28 items-center justify-center rounded-md bg-primary-900 px-4 py-3 text-sm font-medium transition hover:bg-primary-500">
+                                    class="inline-flex min-w-28 items-center justify-center rounded-md bg-primary-950 px-4 py-3 text-sm font-medium transition hover:bg-primary-500">
                                     Download
                                 </a>
                                 <a href="#"
@@ -106,7 +106,7 @@
 
             <div class="mt-8 flex justify-center">
                 <a href="#"
-                    class="inline-flex items-center rounded-md bg-primary-950 px-5 py-3 text-sm font-medium text-white transition hover:bg-primary-900">
+                    class="inline-flex items-center rounded-md bg-primary-950 px-5 py-3 text-sm font-medium text-white transition hover:bg-primary-950">
                     Unduh Lainnya
                 </a>
             </div>
@@ -124,14 +124,14 @@
             </div>
 
             <div class="max-w-xl">
-                <h2 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">Tentang Kami</h2>
-                <span class="mt-5 block h-0.5 w-24 rounded-full bg-primary-900/50"></span>
+                <h2 class="text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl">Tentang Kami</h2>
+                <span class="mt-5 block h-0.5 w-24 rounded-full bg-primary-950/50"></span>
                 <p class="mt-8 text-base leading-8 text-slate-600">
                     NRATrainz adalah proyek pribadi yang menyediakan addons bertema perkeretaapian Indonesia untuk Trainz
                     Simulator.
                 </p>
                 <a href="#"
-                    class="mt-10 inline-flex items-center rounded-md bg-primary-950 px-5 py-3 text-sm font-medium text-white transition hover:bg-primary-900">
+                    class="mt-10 inline-flex items-center rounded-md bg-primary-950 px-5 py-3 text-sm font-medium text-white transition hover:bg-primary-950">
                     Baca Cerita NRATrainz
                 </a>
             </div>
