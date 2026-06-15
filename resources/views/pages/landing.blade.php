@@ -32,10 +32,10 @@
             <p class="mt-4 max-w-2xl text-sm text-background/90 sm:text-lg">
                 Penyedia addons “kecil-kecilan” untuk Trainz Simulator
             </p>
-            <a href="#welcome"
-                class="mt-7 inline-flex items-center rounded-md border border-background/80 bg-background/10 px-5 py-3 text-sm font-medium text-background shadow-lg shadow-black/10 backdrop-blur-sm transition hover:bg-background hover:text-primary-950">
+            <x-button href="#welcome"
+                class="mt-7 px-5 py-3 text-sm border border-background/80 bg-background/10 text-background backdrop-blur-sm shadow-lg shadow-black/10 hover:bg-background hover:text-primary-950">
                 Lihat Selengkapnya
-            </a>
+            </x-button>
         </div>
     </section>
 
@@ -88,14 +88,12 @@
                                 </span>
                             </div>
                             <div class="mt-5 flex flex-wrap gap-3">
-                                <a href="#"
-                                    class="inline-flex min-w-28 items-center justify-center rounded-md bg-primary-950 px-4 py-3 text-sm font-medium transition hover:bg-primary-500">
+                                <x-button href="#" class="min-w-28 px-4 py-3 text-sm bg-primary-950 hover:bg-primary-500 text-white">
                                     Download
-                                </a>
-                                <a href="#"
-                                    class="inline-flex min-w-24 items-center justify-center rounded-md border border-white/80 bg-white/10 px-4 py-3 text-sm font-medium backdrop-blur-sm transition hover:bg-white hover:text-primary-950">
+                                </x-button>
+                                <x-button href="#" class="min-w-24 px-4 py-3 text-sm border border-white/80 bg-white/10 backdrop-blur-sm hover:bg-white hover:text-primary-950">
                                     Detail
-                                </a>
+                                </x-button>
                             </div>
                         </div>
                     </article>
@@ -105,10 +103,9 @@
             </div>
 
             <div class="mt-8 flex justify-center">
-                <a href="#"
-                    class="inline-flex items-center rounded-md bg-primary-950 px-5 py-3 text-sm font-medium text-white transition hover:bg-primary-950">
+                <x-button href="#" class="px-5 py-3 text-sm bg-primary-950 hover:bg-primary-500 text-white">
                     Unduh Lainnya
-                </a>
+                </x-button>
             </div>
 
             <div class="mx-auto mt-10 h-px max-w-6xl bg-slate-200"></div>
@@ -120,7 +117,7 @@
             <div>
                 <img src="{{ asset('images/tentang-kami.webp') }}" alt="Tentang NRATrainz"
                     class="h-full w-full rounded-tr-4xl rounded-br-4xl object-cover shadow-[0_20px_50px_rgba(15,23,42,0.14)]" />
-                <p class="mt-5 text-sm italic text-slate-500">Loko: KAI, Gerbong: GETA, Rute: NRATrainz</p>
+                <p class="mt-5 text-sm italic text-slate-800">Loko: KAI, Gerbong: GETA, Rute: NRATrainz</p>
             </div>
 
             <div class="max-w-xl">
@@ -130,10 +127,9 @@
                     NRATrainz adalah proyek pribadi yang menyediakan addons bertema perkeretaapian Indonesia untuk Trainz
                     Simulator.
                 </p>
-                <a href="#"
-                    class="mt-10 inline-flex items-center rounded-md bg-primary-950 px-5 py-3 text-sm font-medium text-white transition hover:bg-primary-950">
+                <x-button href="#" class="mt-10 px-5 py-3 text-sm bg-primary-950 hover:bg-primary-500 text-white">
                     Baca Cerita NRATrainz
-                </a>
+                </x-button>
             </div>
         </div>
     </section>
