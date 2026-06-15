@@ -15,7 +15,11 @@ class PageController extends Controller
 
     public function myContent()
     {
-        return view('pages.my-content');
+        $addons = Addon::with('category')
+            ->latest('created_at')
+            ->get();
+
+        return view('pages.my-content', compact('addons'));
     }
 
     public function terms()

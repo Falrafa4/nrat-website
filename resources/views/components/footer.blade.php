@@ -3,10 +3,10 @@
         <div>
             <h2 class="text-4xl font-bold">NRATrainz</h2>
             <div class="mt-5 flex items-center gap-4 text-3xl">
-                <a class="transition hover:text-primary-100" href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                <a class="transition hover:text-primary-100" href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                <a class="transition hover:text-primary-100" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a class="transition hover:text-primary-100" href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a class="transition hover:text-primary-100" href="https://www.facebook.com/nra.trainz/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a class="transition hover:text-primary-100" href="https://www.youtube.com/@nra.trainz" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a class="transition hover:text-primary-100" href="https://www.instagram.com/nra.trainz/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a class="transition hover:text-primary-100" href="https://wa.me/62859171657331" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
             </div>
             <p class="mt-5 text-sm text-background/75 sm:text-base">&copy; National Railways Addons Trainz - Copyleft 2025</p>
         </div>
