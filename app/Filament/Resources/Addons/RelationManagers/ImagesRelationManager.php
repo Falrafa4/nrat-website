@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Addons\RelationManagers;
 
+use App\Support\ImageStorage;
 use Filament\Actions\AssociateAction;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\CreateAction;
@@ -12,8 +13,8 @@ use Filament\Actions\DissociateBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Filament\Infolists\Components\ImageEntry;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Resources\RelationManagers\RelationManager;
@@ -21,6 +22,7 @@ use Filament\Schemas\Schema;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Illuminate\Http\UploadedFile;
 
 class ImagesRelationManager extends RelationManager
 {
@@ -32,7 +34,8 @@ class ImagesRelationManager extends RelationManager
             ->components([
                 FileUpload::make('image_path')
                     ->image()
-                    ->required(),
+                    ->required()
+                    ->saveUploadedFileUsing(fn (UploadedFile $file) => ImageStorage::storeAsWebp($file, 'addons/images')),
                 Textarea::make('caption')
                     ->required()
                     ->columnSpanFull(),

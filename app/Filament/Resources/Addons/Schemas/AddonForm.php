@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Addons\Schemas;
 
+use App\Support\ImageStorage;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
@@ -11,6 +12,7 @@ use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Schema;
+use Illuminate\Http\UploadedFile;
 
 class AddonForm
 {
@@ -54,8 +56,8 @@ class AddonForm
                         FileUpload::make('thumbnail')
                             ->label('Thumbnail')
                             ->image()
-                            ->directory('addons/thumbnails')
                             ->imageEditor()
+                            ->saveUploadedFileUsing(fn (UploadedFile $file) => ImageStorage::storeAsWebp($file, 'addons/thumbnails'))
                             ->columnSpanFull(),
                     ]),
 
