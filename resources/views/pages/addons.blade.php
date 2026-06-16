@@ -99,6 +99,6 @@
     </section>
 @endsection
 
-@section('scripts')
+@section('script')
     <script src="{{ asset('js/navbar.js') }}"></script>
 @endsection
