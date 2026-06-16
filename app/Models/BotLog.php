@@ -10,6 +10,6 @@ class BotLog extends Model
         'phone_number',
         'message',
         'command',
-        'response_status'
+        'response_status',
     ];
 }

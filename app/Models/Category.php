@@ -8,10 +8,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Category extends Model
 {
     use SoftDeletes;
-    
+
     protected $fillable = ['name', 'slug', 'description'];
-    
-    public function addons() {
+
+    public function addons()
+    {
         return $this->hasMany(Addon::class);
     }
 }

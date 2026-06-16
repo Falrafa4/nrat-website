@@ -8,7 +8,7 @@ Route::get('/', [PageController::class, 'landing'])->name('landing');
 
 Route::prefix('addons')->name('addons.')->group(function () {
     Route::get('/', [AddonController::class, 'index'])->name('index');
-    Route::get('/{slug}', [AddonController::class, 'show'])->name('show');
+    Route::get('/{addon:slug}', [AddonController::class, 'show'])->name('show');
 });
 
 Route::get('/terms', [PageController::class, 'terms'])->name('terms');

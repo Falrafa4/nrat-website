@@ -23,6 +23,8 @@ class AddonController extends Controller
      */
     public function show(Addon $addon)
     {
+        $addon->load(['category', 'images', 'dependencies']);
+
         return view('pages.addon-detail', compact('addon'));
     }
 }

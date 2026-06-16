@@ -21,7 +21,7 @@ class Addon extends Model
         'addon_type',
         'status',
         'is_featured',
-        'published_at'
+        'published_at',
     ];
 
     public function category()

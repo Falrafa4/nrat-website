@@ -17,10 +17,10 @@ class DashboardStats extends StatsOverviewWidget
         $draftAddons = Addon::where('status', 'draft')->count();
         $totalDownloads = DownloadLog::count();
         $totalCategories = Category::count();
-        
+
         return [
             Stat::make('Total Addons', $totalAddons)
-                ->description($publishedAddons . ' published, ' . $draftAddons . ' draft')
+                ->description($publishedAddons.' published, '.$draftAddons.' draft')
                 ->descriptionIcon('heroicon-m-cube')
                 ->color('primary'),
 

@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -21,5 +20,8 @@ class DatabaseSeeder extends Seeder
             'name' => 'Admin NRATrainz',
             'password' => bcrypt('password'),
         ]);
+
+        // Category Seeder
+        $this->call(CategorySeeder::class);
     }
 }

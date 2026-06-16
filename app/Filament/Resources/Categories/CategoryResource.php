@@ -25,7 +25,7 @@ class CategoryResource extends Resource
 
     protected static ?int $navigationSort = 2;
 
-    protected static string | UnitEnum | null $navigationGroup = 'Content';
+    protected static string|UnitEnum|null $navigationGroup = 'Content';
 
     public static function form(Schema $schema): Schema
     {

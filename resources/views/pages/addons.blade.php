@@ -78,6 +78,17 @@
                                     </dd>
                                 </div>
                             </dl>
+
+                            <div class="mt-6 grid grid-cols-2 gap-3 pt-4 border-t border-slate-100">
+                                <x-button href="{{ route('addons.show', $addon) }}"
+                                    class="w-full text-xs font-semibold py-2.5 rounded-xl border border-primary-950/15 text-primary-950 bg-white hover:bg-slate-50">
+                                    Detail
+                                </x-button>
+                                <x-button href="{{ $addon->download_url }}" target="_blank" rel="noopener noreferrer"
+                                    class="w-full text-xs font-semibold py-2.5 rounded-xl bg-primary-950 text-white hover:bg-primary-500">
+                                    Download
+                                </x-button>
+                            </div>
                         </div>
                     </article>
                 @empty
