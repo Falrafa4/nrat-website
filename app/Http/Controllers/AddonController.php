@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Addon;
-use Illuminate\Http\Request;
 
 class AddonController extends Controller
 {
@@ -12,54 +11,18 @@ class AddonController extends Controller
      */
     public function index()
     {
-        //
-    }
+        $addons = Addon::with('category')
+            ->latest('created_at')
+            ->get();
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
+        return view('pages.addons', compact('addons'));
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Addon $addons)
+    public function show(Addon $addon)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Addon $addons)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Addon $addons)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Addon $addons)
-    {
-        //
+        return view('pages.addon-detail', compact('addon'));
     }
 }
