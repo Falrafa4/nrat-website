@@ -33,7 +33,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-link {
-    @apply text-sm text-background/80 transition hover:text-background sm:text-base;
+    @apply relative pb-1 text-sm text-background/80 transition hover:text-background sm:text-base;
+}
+
+.nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 h-[2px] w-full scale-x-0 bg-current transition-transform duration-300 origin-left;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    @apply scale-x-100;
+}
+
+.nav-link.active {
+    @apply text-background font-semibold;
 }
 
 #main-nav.navbar-scrolled {
@@ -46,4 +60,8 @@ h1, h2, h3, h4, h5, h6 {
 
 #main-nav.navbar-scrolled .nav-link {
     @apply text-primary-950/70 hover:text-primary-950;
+}
+
+#main-nav.navbar-scrolled .nav-link.active {
+    @apply text-primary-950;
 }
